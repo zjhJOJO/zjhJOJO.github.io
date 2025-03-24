@@ -7,8 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" rel="stylesheet" /> -->
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="img/x-icon">
+
     <title>
-        VividDreamer
+        SegmentDreamer
     </title>
 
     <link rel="icon" href="assets/favicon.ico">
@@ -46,6 +54,30 @@
             background: rgb(255, 255, 255) no-repeat fixed top left;
             font-family:'Open Sans', sans-serif;
         }
+        span.blue {
+            color: #007bff; /* 蓝色，可换为具体想要的蓝色十六进制值 */
+            }
+        code {
+        white-space: pre-wrap;
+        }
+
+        .btn-custom {
+            background-color: black !important;
+            color: rgb(220, 220, 220) !important;
+            border-radius: 10px;
+        }
+
+        .btn-custom .fa {
+            color: rgb(220, 220, 220) !important;
+            border-radius: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
     </style>
 
 </head>
@@ -58,9 +90,11 @@
                 <div class="row">
                     <div class="col">
                         <!-- paper title -->
-                        <h2 style="font-size:40px;">
-                            <strong>VividDreamer</strong>: Towards High-Fidelity and Efficient Text-to-3D Generation
+                        <!-- <h2 style="font-size:40px;"> -->
+                        <h2 style="font-family: 'Helvetica Neue', Arial, sans-serif;font-size:40px">
+                            <span class="blue"><strong>SegmentDreamer</strong></span>: Towards High-fidelity Text-to-3D Synthesis <br>with Segmented Consistency Trajectory Distillation 
                         </h2>
+                        
                         <!-- publication -->
 
                         <!-- <h3 style="color:#6e6e6e;"> ICCV 2023 </h3>
@@ -69,16 +103,13 @@
                         <!-- authors -->
                         <span>
                             <h4> 
-                                <a href="https://NarcissusEx.github.io" target="_blank" style="margin-right:30px"><sup>1</sup>Zixuan Chen</a>
-                                <a href="" target="_blank" style="margin-right:30px"><sup>1</sup>Ruijie Su</a>
                                 <a href="" target="_blank" style="margin-right:30px"><sup>1</sup>Jiahao Zhu</a>
+                                <a href="" target="_blank" style="margin-right:30px"><sup>1</sup>ZiXuan Chen</a>
                                 <a href="https://wanggcong.github.io" target="_blank" style="margin-right:30px"><sup>2</sup>Guangcong Wang</a>
-                                <a href="https://zjjconan.github.io" target="_blank" style="margin-right:30px"><sup>1</sup>Lingxiao Yang</a>
-                                <a href="https://cse.sysu.edu.cn/content/2498" target="_blank" style="margin-right:30px"><sup>1</sup>Jian-Huang Lai</a>
                             </h4>
                             <h4>
-                                <a href="" target="_blank" style="margin-right:30px"><sup>3</sup>Shisong Wu</a>
                                 <a href="https://cse.sysu.edu.cn/content/2478" target="_blank" style="margin-right:30px"><sup>1</sup>Xiaohua Xie</a>
+                                <a href="https://zssom.sysu.edu.cn/teacher/ZhouYi" target="_blank" style="margin-right:30px"><sup>1</sup>Yi Zhou</a>
                             </h4>
                         </span>
                         <div style="display: flex;justify-content: center;align-items: center;">
@@ -89,27 +120,36 @@
                             </div>
                             <div style="margin: 0 3%;">
                                 <h4>
-                                    <sup>1</sup>Great Bay University
+                                    <sup>2</sup>Great Bay University
                                 </h4>
                             </div>
                         </div>
-                        <h4> 
-                            <sup>3</sup>China Southern Power Grid Artificial Intelligence Technology Co., Ltd.
-                        </h4>
                         <!-- links -->
-                        <div style="display: flex;justify-content: center;align-items: center;">
-                            <div style="margin: 0 5%;">
-                                <a href="https://arxiv.org/abs/2406.14964" target="_blank">
-                                    <img src="assets/paper.png", style="height: 60px;margin-bottom: 5px;">
-                                    <h6><strong>Paper</strong></h6>
-                                </a>
-                            </div>
-                            <div style="margin: 0 5%;">
-                                <a href="https://github.com/NarcissusEx/VividDreamer" target="_blank">
-                                    <img src="assets/github.png", style="height: 60px;margin-bottom: 5px;">
-                                    <h6><strong>Code</strong></h6>
-                                </a>
-                            </div>
+                        <div class="flex-container">
+                            <div class="column">
+                                <p class="mb-5">
+                                  <a class="btn btn-large btn-light btn-custom" href="" role="button" target="_blank">
+                                    <i class="fa fa-file-pdf-o"></i>
+                                    Paper
+                                  </a>
+                                </p>
+                              </div>
+                              <div class="column">
+                                <p class="mb-5">
+                                  <a class="btn btn-large btn-light btn-custom" href="" role="button" target="_blank">
+                                    <i class="fa fa-github"></i>
+                                    Code
+                                  </a>
+                                </p>
+                              </div>
+                              <div class="column">
+                                <p class="mb-5">
+                                  <a class="btn btn-large btn-light btn-custom" href="https://youtu.be/haUjuRgiis0" role="button" target="_blank">
+                                    <i class="fa fa-file-video-o"></i>
+                                    Video
+                                  </a>
+                                </p>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -121,48 +161,18 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                <!-- <h3>Abstract</h3> -->
-                    <div class="row justify-content-center" style="align-items:center; display:flex;margin-top: -1.5em;">
-                        <div> 
-                            <img src="assets/Examples.png" alt="VividDreamer" class="img-responsive" width="100%"/>
-                        </div>
-                        <div>
-                            <h4><b>Text-to-3D Examples</b></h4>
-                        </div>
-                    </div>
-                    <hr style="margin-top: 0px;">
-                    <!-- <br> -->
-                    <div class="row justify-content-center" style="align-items:center; display:flex; margin-top: -1em;">
-                        <div> 
-                            <video autoplay loop playsinline muted style="width: 100%;">
-                                <source data-src="assets/process.mp4" type="video/mp4" src="assets/process.mp4">
-                            </video>
-                            <!-- <video width="100%" autoplay="autoplay" loop="loop" controls>
-                                <source src="" type="video/mp4">
-                            </video> -->
-                        </div>
-                        <table style="table-layout: fixed;" width="100%">
-                            <tbody>
-                                <td width="33%"> 
-                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Iron Man</b></span>"</i></p>
-                                </td>
-                                <td width="33%"> 
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>bichon frise</b></span> <span style="color:#52B19A"><b>wearing academic regalia</b></span>"</i></p>
-                                </td>
-                                <td width="33%"> 
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>plush dragon toy</b></span>"</i></p>
-                                </td>
-                            </tbody>
-                        </table>
-                        <div>
-                            <h4><b>Training Process</b></h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- <p class="text-justify">
-                    <b>Examples of text-to-3D asset creations with our framework (a).</b> In this paper, we present <b>VividDreamer</b>, an efficient text-to-3D generation framework that can distill semantically-consistent textures and high-fidelity structures from pretrained 2D diffusion models using a novel <b>Pose-dependent Consistency Distillation Sampling</b> objective in a <b>coarse-to-fine optimization</b> manner, allowing to yield high-fidelity 3D objects (rows 1 and 2) and 3D avatars (row 3) based on the given text prompts. Specifically, <b>VividDreamer</b> achieves high training efficiency, which can create ready-to-use 3D assets within 10 minutes, while producing photorealistic 3D objects within 30 minutes <b>(b)</b>.
-                </p> -->
+                <!-- <video autoplay loop playsinline muted style="width: 100%;">
+                    <source type="video/mp4" src="https://youtu.be/haUjuRgiis0">
+                </video> -->
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    src="https://youtu.be/haUjuRgiis0" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen
+                    style="border: none;">
+                </iframe>
             </div>
         </div>
     </section>
@@ -171,113 +181,60 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-left">
-                    <h3>Abstract</h3>
+                    <h3 style="font-family: Arial, sans-serif;"><b>Abstract</b></h3>
+                    <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
                 </div>
                 <p class="text-justify">
-                    Text-to-3D generation aims to create 3D assets from text-to-image diffusion models. However, existing methods face an inherent bottleneck in generation quality because the widely-used objectives such as Score Distillation Sampling (SDS) inappropriately omit U-Net jacobians for swift generation, leading to significant bias compared to the ''true'' gradient obtained by full denoising sampling. This bias brings inconsistent updating direction, resulting in implausible 3D generation (<i>e.g.,</i> color deviation, Janus problem, and semantically inconsistent details). In this work, we propose <b>Pose-dependent Consistency Distillation Sampling</b> (PCDS), a novel yet efficient objective for diffusion-based 3D generation tasks. Specifically, <b>PCDS</b> builds the <b>pose-dependent consistency function</b> within diffusion trajectories, allowing to approximate true gradients through minimal sampling steps (1~3). Compared to SDS, <b>PCDS</b> can acquire a more accurate updating direction with the same sampling time (1 sampling step), while enabling few-step (2~3) sampling to trade compute for higher generation quality. For efficient generation, we propose a coarse-to-fine optimization strategy, which first utilizes 1-step <b>PCDS</b> to create the basic structure of 3D objects, and then gradually increases <b>PCDS</b> steps to generate fine-grained details. Extensive experiments demonstrate that our approach outperforms the state-of-the-art in generation quality and training efficiency, conspicuously alleviating the implausible 3D generation issues caused by the deviated updating direction. Specifically, <b>VividDreamer</b> can create ready-to-use 3D assets within 10 minutes, while produces photorealistic 3D objects within 30 minutes. Moreover, it can be simply applied to many 3D generative applications to yield impressive 3D assets, such as <b>3D portrait and avatar generation</b> and <b>text-to-3D editing</b>.
+                    Recent advancements in text-to-3D generation improve the visual quality of Score Distillation Sampling (SDS) and its variants by directly connecting Consistency Distillation (CD) to score distillation. However, due to the imbalance between self-consistency and cross-consistency, these CD-based methods inherently suffer from improper conditional guidance, leading to sub-optimal generation results. To address this issue, we present <span class="blue"><b>SegmentDreamer</b></span>, a novel framework designed to fully unleash the potential of consistency models for high-fidelity text-to-3D generation. Specifically, we reformulate SDS through the proposed Segmented Consistency Trajectory Distillation (SCTD), effectively mitigating the imbalance issues by explicitly defining the relationship between self- and cross-consistency. Moreover, <span class="blue"><b>SCTD</b></span> partitions the Probability Flow Ordinary Differential Equation (PF-ODE) trajectory into multiple sub-trajectories and ensures consistency within each segment, which can theoretically provide a significantly tighter upper bound on distillation error. Additionally, we propose a distillation pipeline for a more swift and stable generation. Extensive experiments demonstrate that our <span class="blue"><b>SegmentDreamer</b></span> outperforms state-of-the-art methods in visual quality, enabling high-fidelity 3D asset creation through 3D Gaussian Splatting (3DGS).
                 </p>
             </div>
         </div>
     </section>
     <br>
 
-  <!-- <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h3>Preliminary</h3>
-          <div class="row justify-content-center" style="align-items:center; display:flex;">
-            <div> 
-              <img src="assets/preliminary.png" alt="cunerf" class="img-responsive" width="100%"/>
-            </div>
-          </div>
-          <br>
-        </div>
-          <p class="text-justify" style="margin-top:-30px">
-            Supervised MISR methods <b>(a)</b> need to collect considerable LR-HR pairs for training, while zero-shot MISR <b>(b)</b> and our <b>CuNeRF</b> <b>(c)</b> only train the model on each test volume itself.
-            However, given a test volume, ZSMISR methods can only upsample medical images at a specific scale (one-for-one), while our <b>CuNeRF</b> can handle arbitrary upsampling scales (one-for-all). 
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <br> -->
-
-    <!-- <section>
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-12 text-left">
-                    <h3>Motivation</h3> 
-                    <div class="row justify-content-center" style="align-items:center; display:flex;">
-                        <div> 
-                            <img src="assets/difference.png" alt="VividDreamer" class="img-responsive" width="100%"/>
-                        </div>
-                    </div>
-                    <br>
+                    <h3 style="font-family: Arial, sans-serif;"><b>Method</b></h3>
+                    <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
                 </div>
-                <p class="text-justify" style="margin-top:-20px">
-                    <b>Examples of different objectives. </b>Visually, the acquisition of ''true'' gradient <b>(a)</b> is a time-consuming work, requiring the full denoising sampling in each iteration. To skip such a lengthy process, Score Distillation Sampling (SDS) <b>(b)</b> directly maps the noise to data (<i>i.e.,</i> <b>pseudoGTs</b>) using 1-step DDPM sampling, but SDS struggles to acquire accurate gradients due to the intrinsic randomness brought by DDPM. On the contrary, our <b>PCDS</b> builds the <b>pose-dependent consistency function</b> $f_\phi$ from any timestep $t$ to the origin 0 within diffusion trajectories, allowing to generate accurate <b>pseudoGTs</b> and acquire precise gradients via minimal sampling steps (1~3).
+                <img src="assets/framework.pdf" width="100%"/>
+                <p class="text-justify">
+                    An overview of SegmentDreamer: We begin by initializing a 3D representation θusing a 3D generator, such as Point-E. In each iteration, we randomly render a batch of camera views  \( \mathbf{z}_0 \) from \( \theta \) and diffuse them into \( \mathbf{z}_m \) with fixed noise \( \boldsymbol{\epsilon}^* \). Next, we transform zsm into \(\tilde{\mathbf{z}}^{\boldsymbol{\Phi}}_t\) using either one-step or two-step unconditional deterministic sampling. During the denoising process, we first estimate \(\hat{\mathbf{z}}^{\boldsymbol{\Phi}}_s\) through one-step conditional deterministic sampling from \(\tilde{\mathbf{z}}^{\boldsymbol{\Phi}}_t\). Subsequently, we compute two consistency
+                    functions and utilize them to derive the loss \(\mathcal{L}_{\text{SCTD}}\), which is ultimately employed to optimize \(\theta\)
                 </p>
             </div>
         </div>
     </section>
-    <br> -->
-
-    <!-- <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3>Framework</h3>
-                    <div class="row justify-content-center" style="align-items:center; display:flex;">
-                        <div> 
-                        <img src="assets/framework.png" alt="cunerf" class="img-responsive" width="100%"/>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <p class="text-justify">
-                    The overall framework of our <b>CuNeRF</b>.
-                    To synthesize a pixel (<font color="red">red circle</font>) with the spatial position $\mathbf{x}_t=(x, y, z)$, <b>(a)</b> <b>CuNeRF</b> first uniformly samples $N$ points as a point set $\{\hat{\mathbf{x}}_i\}^N_{i=1}$ within the cube space (<font color="orchid">purple cube</font>) centered by $\mathbf{x}_t$.
-                    Then, <b>CuNeRF</b> obtains the coarse estimation (<font color="blue">blue cube</font>) by feeding the sampling points into an MLP $F_{\Theta}$ to produce the set of corresponding pixel intensity $\{c_i\}_{i=1}^N$ and volume density $\{\sigma_i\}_{i=1}^N$.    
-                    <b>(b)</b> Subsequently, assuming $\sigma$ of each sampling point is only related to the distance with the cube center $\mathbf{x}_t$, <b>CuNeRF</b> computes the coarse output of the target pixel via volume integral.
-                    <b>(c)</b> Finally, <b>CuNeRF</b> resamples the points under the probability density function (PDF) of coarse estimation to acquire the fine estimation (<font color="orange">orange cube</font>) of the cube.
-                    The fine output is generated by the same procedures as <b>(b)</b>.
-                    Since these two rendering functions are differentiable, <b>CuNeRF</b> can be optimized by minimizing the rendering loss $\mathcal{L}_{A}$.
-                    The fine output is the final rendering result of the target spatial position $\mathbf{x}_t$.
-                </p>
-            </div>
-        </div>
-    </section> -->
-    <!-- <br> -->
-
-
+    <br>
     <!-- comparison results -->
     <section>
         <div class="container">
             <div class="row">
-                <div class="text-left">
-                    <!-- <hr style="margin-top:0px"> -->
-                    <h3>Visual Comparisons</h3>
+                <div class="col-12 text-left">
+                    <h3 style="font-family: Arial, sans-serif;"><b>Visual Comparisons</b></h3>
+                    <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
                 </div>
                 <div class="text-center">
                     <table style="table-layout: fixed;" width="100%">
                         <tbody>
                             <tr>
-                                <td width="15%"></td>
-                                <td width="21%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">Stable DreamFusion</p><p style="font-size: large;">(~1h)</p>
+                                <td width="17%"></td>
+                                <td width="23%"> 
+                                    <p style="font-size: larger;margin-bottom: 0em;">DreamFusion</p><p style="font-size: large;">(~1h)</p>
                                 </td>
-                                <!-- <td width="17%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">DreamGaussian</p><p style="font-size: large;">(~3mins)</p>
-                                </td> -->
-                                <td width="21%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">GaussianDreamer</p><p style="font-size: large;">(~9mins)</p>
+                                <td width="19%"> 
+                                    <p style="font-size: larger;margin-bottom: 0em;">LucidDreamer</p><p style="font-size: large;">(35~45)</p>
                                 </td>
                                 <td width="21%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">LucidDreamer</p><p style="font-size: large;">(~45mins)</p>
+                                    <p style="font-size: larger;margin-bottom: 0em;">Consistent3D</p><p style="font-size: large;">(~2.4h)</p>
                                 </td>
                                 <td width="21%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;"><b>VividDreamer (Ours)</b></p><p style="font-size: large;">(~30mins)</p>
+                                    <p style="font-size: larger;margin-bottom: 0em;">Connect3D</p><p style="font-size: large;">(1h~1.4h)</p>
+                                </td>
+                                <td width="21%"> 
+                                    <p style="font-size: larger;margin-bottom: 0em;"><span class="blue"><b>SegmentDreamer</b></span></p><p style="font-size: large;">(32~38min)</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -289,108 +246,114 @@
                             <tr>
                                 <td width="15%">
                                     <!-- <i>"A DSLR photo of a <span style="color:#EA700D"><b>chow chow puppy</b></span>"</i> -->
-                                    <p style="font-size: larger;"><i>"A DSLR photo of a <span style="color:#EA700D"><b>chow chow puppy</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a car</b></span> <span style="color:#52B19A"><b>made out of cheese</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_DSLR_photo_of_a_chow_chow_puppy.mp4">
+                                        <source type="video/mp4" src="assets/comp/carcheeze.mp4">
                                     </video>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="15%">
                                     <!-- <i>"A DSLR photo of a <span style="color:#EA700D"><b>chow chow puppy</b></span>"</i> -->
-                                    <p style="font-size: larger;"><i>"A zoomed out DSLR photo of a <span style="color:#EA700D"><b>wizard raccoon</b></span> <span style="color:#52B19A"><b>casting a spell</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A zoomed out DSLR photo of </b><span style="color:#EA700D"><b>a robot</b></span> <span style="color:#52B19A"><b>made out of vegetables</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_zoomed_out_DSLR_photo_of_a_wizard_raccoon_casting_a_spell.mp4">
+                                        <source type="video/mp4" src="assets/comp/vegerobot.mp4">
                                     </video>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="15%">
                                     <!-- <i>"A DSLR photo of a <span style="color:#EA700D"><b>chow chow puppy</b></span>"</i> -->
-                                    <p style="font-size: larger;"><i>"A DSLR photo of a <span style="color:#EA700D"><b>baby dragon</b></span> <span style="color:#52B19A"><b>drinking_boba</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a bald eagle</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_DSLR_photo_of_a_baby_dragon_drinking_boba.mp4">
+                                        <source type="video/mp4" src="assets/comp/eagle.mp4">
                                     </video>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="15%">
                                     <!-- <i>"A DSLR photo of a <span style="color:#EA700D"><b>chow chow puppy</b></span>"</i> -->
-                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>a tray of Sushi</b></span> <span style="color:#52B19A"><b>containing pugs</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a bear</b></span> <span style="color:#52B19A"><b>dressed as a lumberjack</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_DSLR_photo_of_a_tray_of_Sushi_containing_pugs.mp4">
+                                        <source type="video/mp4" src="assets/comp/bearjack.mp4">
                                     </video>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="15%">
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>goat</b></span> <span style="color:#52B19A"><b>drinking beer</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>An </b><span style="color:#EA700D"><b>amigurumi bulldozer</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_goat_drinking_beer.mp4">
+                                        <source type="video/mp4" src="assets/comp/bull.mp4">
                                     </video>
                                 </td>
                             </tr>
                             <tr>
                                 <td width="15%">
-                                    <p style="font-size: larger;"><i>"A DSLR photo of a <span style="color:#EA700D"><b>terracotta bunny</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a corgi</b></span> <span style="color:#52B19A"><b>wearing a top hat</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_DSLR_photo_of_a_terracotta_bunny.mp4">
+                                        <source type="video/mp4" src="assets/comp/corgihat.mp4">
                                     </video>
                                 </td>
                             </tr>
-                            <!-- <tr>
+                            <tr>
                                 <td width="15%">
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>capybara</b></span> <span style="color:#52B19A"><b>wearing a top hat</b></span>, <span style="color:#52B19A"><b>low poly</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<b>A plush toy of </b><span style="color:#EA700D"><b>a corgi nurse</b></span>."</i></p>
                                 </td>
                                 <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_capybara_wearing_a_top_hat_low_poly.mp4">
+                                        <source type="video/mp4" src="assets/comp/corginurse.mp4">
                                     </video>
                                 </td>
-                            </tr> -->
-                            <!-- <tr>
-                                <td width="15%">
-                                    
-                                </td>
-                                <td width="75%">
-                                    
-                                </td>
-                            </tr> -->
+                            </tr>
                         </tbody>
                     </table>
-                    <hr>
                 </div>
-                <br>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section>
+        <div class="container">
+            <div class="row">
                 <div class="text-left">
-                    <h3>Visual Comparisons (~10 minutes)</h3>
+                    <div class="col-12 text-left">
+                        <h3 style="font-family: Arial, sans-serif;"><b>Consistency Distillation Loss Comparisons</b></h3>
+                        <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
+                    </div>
                 </div>
                 <div class="text-center">
                     <table style="table-layout: fixed;" width="100%">
                         <tbody>
                             <tr>
-                                <td width="25%"></td>
+                                <td width="17%"></td>
                                 <td width="20%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">GaussianDreamer (SDS)</p><p style="font-size: large;">(~9mins)</p>
+                                    <p style="font-size: medium;margin-bottom: 0em;">Consistent3D (CDS)</p><p style="font-size: large;">(CFG: 7.5)</p>
                                 </td>
                                 <td width="20%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;">LucidDreamer (ISM)</p><p style="font-size: large;">(~10mins)</p>
+                                    <p style="font-size: medium;margin-bottom: 0em;">Consistent3D (CDS)</p><p style="font-size: large;">(CFG: 20~40)</p>
                                 </td>
                                 <td width="20%"> 
-                                    <p style="font-size: larger;margin-bottom: 0em;"><b>VividDreamer (Ours)</b></p><p style="font-size: large;">(~10mins)</p>
+                                    <p style="font-size: medium;margin-bottom: 0em;">ConnectCD (GCS)</p><p style="font-size: large;">(CFG: 7.5)</p>
                                 </td>
-                                <td width="15%"></td>
+                                <td width="20%"> 
+                                    <p style="font-size: medium;margin-bottom: 0em;">ConnectCD (GCS+BEG)</p><p style="font-size: large;">(CFG: 7.5)</p>
+                                </td>
+                                <td width="20%"> 
+                                    <p style="font-size: medium;margin-bottom: 0em;"><span class="blue"><b>SCTD (Ours)</b></span></p><p style="font-size: large;">(CFG: 7.5)</p>
+                                </td>
+                       
                             </tr>
                         </tbody>
                     </table>
@@ -399,46 +362,39 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td width="5%"></td>
-                                <td width="20%">
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>pig</b></span> <span style="color:#52B19A"><b>wearing a backpack</b></span>"</i></p>
+                                <td width="15%">
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a corgi</b></span> <span style="color:#52B19A"><b>wearing a top hat</b></span>."</i></p>
                                 </td>
-                                <td width="60%">
+                                <td width="100%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_pig_wearing_a_backpack.mp4">
+                                        <source type="video/mp4" src="assets/loss_comp/corgihat.mp4">
                                     </video>
                                 </td>
-                                <td width="15%"></td>
                             </tr>
                             <tr>
-                                <td width="5%"></td>
-                                <td width="20%">
-                                    <p style="font-size: larger;"><i>"A DSLR photo of a <span style="color:#EA700D"><b>corgi puppy</b></span>"</i></p>
+                                <td width="15%">
+                                    <p style="font-size: larger;"><i>"<b>A DSLR photo of </b><span style="color:#EA700D"><b>a pig</b></span> <span style="color:#52B19A"><b>wearing a backpack</b></span>."</i></p>
                                 </td>
-                                <td width="60%">
+                                <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_DSLR_photo_of_a_corgi_puppy.mp4">
+                                        <source type="video/mp4" src="assets/loss_comp/pig.mp4">
                                     </video>
                                 </td>
-                                <td width="15%"></td>
                             </tr>
                             <tr>
-                                <td width="5%"></td>
-                                <td width="20%">
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>yellow schoolbus</b></span>"</i></p>
+                                <td width="15%">
+                                    <p style="font-size: larger;"><i><b>"A DSLR photo of </b><span style="color:#EA700D"><b>a tiger </b></span><span style="color:#52B19A"><b>made out of yarn</b></span>."</i></p>
                                 </td>
-                                <td width="60%">
+                                <td width="85%">
                                     <video autoplay loop playsinline muted style="width: 100%;">
-                                        <source type="video/mp4" src="assets/comp/a_yellow_schoolbus.mp4">
+                                        <source type="video/mp4" src="assets/loss_comp/tiger.mp4">
                                     </video>
                                 </td>
-                                <td width="15%"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <hr>
         </div>
     </section>
 
@@ -446,73 +402,74 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-left">
-                    <h3>More Generated Results</h3>
+                    <h3 style="font-family: Arial, sans-serif;"><b>More Generated Results
+                    <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
                 </div>
                 <div class="text-center">
                     <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/visual/0.mp4">
+                            <source type="video/mp4" src="assets/mresults/1.mp4">
                         </video>
                         <tbody>
                             <tr>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>piglet</b></span> <span style="color:#52B19A"><b>sitting in a teacup</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>an astronaut</b></span> <span style="color:#52B19A"><b>riding a horse</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A <span style="color:#EA700D"><b>red panda</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>A capybara</b></span> <span style="color:#52B19A"><b>wearing a top hat, low poly style</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>shiba inu</b></span> <span style="color:#52B19A"><b>wearing golf clothes and hat</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>A baby dragon</b></span> <span style="color:#52B19A"><b>is spraying flames</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>cocker spaniel</b></span> <span style="color:#52B19A"><b>wearing a crown</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b> the Mount Fuji, aerial view</b></span>."</i></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/visual/1.mp4">
+                            <source type="video/mp4" src="assets/mresults/2.mp4">
                         </video>
                         <tbody>
                             <tr>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A zoomed out DSLR photo of a <span style="color:#EA700D"><b>corgi</b></span> <span style="color:#52B19A"><b>wearing a top hat</b></span>"</i></p>
+                                    <p style="font-size: larger"><i>"<span style="color:#EA700D"><b>'A steampunk owl </b></span> <span style="color:#52B19A"><b>with mechanical wings</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>squirrel</b></span> <span style="color:#52B19A"><b>dressed like a clown</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>a LV handbag</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A zoomed out DSLR photo of a <span style="color:#EA700D"><b>kingfisher bird</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A zoomed out DSLR photo of <span style="color:#EA700D"><b>an origami hippo</b></span> <span style="color:#52B19A"><b>in a river</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>mandarin duck</b></span> <span style="color:#52B19A"><b>swimming in a pond</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>A delicious hamburger</b></span>."</i></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/visual/2.mp4">
+                            <source type="video/mp4" src="assets/mresults/3.mp4">
                         </video>
                         <tbody>
                             <tr>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A <span style="color:#EA700D"><b>plush toy</b></span> of a <span style="color:#52B19A"><b>corgi nurse</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>a peacock </b></span> <span style="color:#52B19A"><b>on a surfboard</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A <span style="color:#EA700D"><b>plush dragon toy</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>a robot dinosaur</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A DSLR photo of a <span style="color:#EA700D"><b>hippo</b></span> with <span style="color:#52B19A"><b>wearing a sweater</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"A DSLR photo of <span style="color:#EA700D"><b>an erupting volcano, </b></span> <span style="color:#52B19A"><b>aerial view</b></span>."</i></p>
                                 </td>
                                 <td width="25%"> 
-                                    <p style="font-size: larger;margin-top:-2.5em"><i>"A zoomed out DSLR photo of a <span style="color:#EA700D"><b>lion's mane jellyfish</b></span>"</i></p>
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>An airplane</b></span> <span style="color:#52B19A"><b>made out of wood</b></span>."</i></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <table style="table-layout: fixed;" width="100%">
+                    <!-- <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
                             <source type="video/mp4" src="assets/visual/3.mp4">
                         </video>
@@ -593,12 +550,12 @@
                                 <td width="25%"> 
                                     <p style="font-size: larger;margin-top:-1em"><i>"An <span style="color:#EA700D"><b>erupting volcano</b></span>"</i></p>
                                 </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </tr> -->
+                        <!-- </tbody>
+                    </table> -->
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
         </div>
     </section>
 
@@ -606,36 +563,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-left">
-                    <h3>Applications</h3>
+                    <h3 style="font-family: Arial, sans-serif;"><b>Application
+                        <hr style="border: 0; height: 1px; background: #eee; margin: 10px 0;">
                 </div>
                 <div class="col-12 text-center">
-                    <h4>3D Portrait Generation</h4>
+                    <h4>3D Head Generation</h4>
                     <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/avatar/0.mp4">
+                            <source type="video/mp4" src="assets/heads/heads.mp4">
                         </video>
                         <tbody>
                             <tr>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>boy</b></span> <span style="color:#52B19A"><b>with facial painting</b></span>, head, HDR, photorealistic, 8K"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<b>A portrait of </b><span style="color:#EA700D"><b>IRONMAN, </b></span> <span style="color:#52B19A"><b>white hair, head, photorealistic, 8K, HDR</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Barack Obama</b></span>, head, HDR, photorealistic, 8K"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<b>A portrait of </b></M><span style="color:#EA700D"><b>Captain America, </b></span> <span style="color:#52B19A"><b>white hair, head, photorealistic, 8K, HDR</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"Portrait of <span style="color:#EA700D"><b>young norwegian woman</b></span>, <span style="color:#52B19A"><b>steampunk, long hair</b></span>"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<b>A portrait of <b><span style="color:#EA700D"><b>Kid Spiderman, </b></span> <span style="color:#52B19A"><b>blue hair, head, photorealistic, 8K, HDR</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Robert Pattinson</b></span>, head, HDR, photorealistic, 8K"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<b>A portrait of <b><span style="color:#EA700D"><b>white marble bust of BATMAN,</b></span> <span style="color:#52B19A"><b>head, 8K, HDR</b></span>."</i></p>
+                                </td>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<b>A portrait of <b><span style="color:#EA700D"><b>Hulk,</b></span> <span style="color:#52B19A"><b>head, photorealistic, 8K, HDR</b></span>."</i></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <hr>
                     <h4>3D Avatar Generation</h4>
-                    <table style="table-layout: fixed;" width="100%">
+                    <!-- <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/avatar/1.mp4">
+                            <source type="video/mp4" src="assets/heads/heads.mp4">
                         </video>
                         <tbody>
                             <tr>
@@ -653,29 +614,32 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> -->
                     <table style="table-layout: fixed;" width="100%">
                         <video autoplay loop playsinline muted style="width: 100%;">
-                            <source type="video/mp4" src="assets/avatar/2.mp4">
+                            <source type="video/mp4" src="assets/avatars/avatars.mp4">
                         </video>
                         <tbody>
                             <tr>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Sun Wukong</b></span>"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>An armored green-skin orc</b></span> <span style="color:#52B19A"><b>riding a vicious hog</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Captain Marvel</b></span>"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>Mulan,</b></span> <span style="color:#52B19A"><b>Anime, full body, with armor</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>young man</b></span> <span style="color:#52B19A"><b>wearing a turtleneck</b></span>"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>black dragonborn,</b></span> <span style="color:#52B19A"><b>solo, red eyes, male, full body</b></span>."</i></p>
                                 </td>
-                                <td width="25%"> 
-                                    <p style="font-size: larger;"><i>"A <span style="color:#EA700D"><b>Mediterranean</b></span> <span style="color:#52B19A"><b>with beard wearing white linen shirt</b></span>"</i></p>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>A soldier, </b></span> <span style="color:#52B19A"><b>riding a tiger</b></span>."</i></p>
+                                </td>
+                                <td width="20%"> 
+                                    <p style="font-size: larger;"><i>"<span style="color:#EA700D"><b>A warrior</b></span> <span style="color:#52B19A"><b>with a red cape riding a horse</b></span>."</i></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <hr>
+                    <!-- <hr>
                     <h4>Text-to-3D Editing</h4>
                     <table style="table-layout: fixed;margin-bottom: -4em;">
                         <video autoplay loop playsinline muted style="width: 100%;">
@@ -683,7 +647,7 @@
                         </video>
                         <img src="assets/editing/edit.png" width="100%" style="margin-top: -3.5em; margin-bottom: -1em;"/>
                         <hr style="margin-top:0px">
-                    </table>
+                    </table> -->
                 </div>
             </div>
             
@@ -696,13 +660,13 @@
     <div class="container">
         <div class="row ">
             <div class="col-12">
-                <h3>Citation</h3>
+                <h3 style="font-family: Arial, sans-serif;">Citation</h3>
                 <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
 <code>@article{chen2024vividdreamer,
-    title={VividDreamer: Towards High-Fidelity and Efficient Text-to-3D Generation},
-    author={Chen, Zixuan and Su, Ruijie and Zhu, Jiahao and Yang, Lingxiao and Lai, Jian-Huang and Xie, Xiaohua},
-    journal={arXiv preprint arXiv:2406.14964},
-    year={2024}
+    title={SegmentDreamer: Towards High-fidelity Text-to-3D Synthesis with Segmented Consistency Trajectory Distillation},
+    author={Zhu, Jiahao and Chen, Zixuan and Wang, Guangcong and Xie, Xiaohua and Zhou, Yi},
+    journal={arXiv preprint arXiv:xxxx.xxxxx},
+    year={2025}
 }</code>
                 </pre>
             </div>
@@ -713,7 +677,7 @@
     <div class="container">
         <div class="row ">
             <div class="col-12">
-                <h3>Acknowledgements</h3>
+                <h3 style="font-family: Arial, sans-serif;">Acknowledgements</h3>
                 <hr style="margin-top:0px">
             </div>
             <p class="text-justify">
